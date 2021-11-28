@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
@@ -42,6 +43,7 @@ var config = {
     plugins: [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({ template: './src/index.html' }),
+        new BundleAnalyzerPlugin()
     ],
     optimization: {
         minimize: false
