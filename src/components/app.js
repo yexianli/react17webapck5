@@ -1,17 +1,25 @@
 import React from 'react';
-import './App.less';
-import 'antd/dist/antd.less'
-import { Button } from 'antd';
+import './app.less';
+import 'antd/dist/antd.less';
+import {
+  Outlet, Link, useRoutes, useParams,
+} from 'react-router-dom';
 import Header from './header/header';
+import routeConfig from '../route/routeConfig';
 
-function App() {
+const App = function () {
+  const element = useRoutes(routeConfig);
+  return (
 
-    return (
+    <>
+      <div>
+        <Link to='/test'>test</Link>
+      </div>
+      <Link to='/header'>header</Link>
+      {element}
 
-        <>
-            <Header></Header>
-        </>
-    );
-}
+    </>
+  );
+};
 
 export default App;
