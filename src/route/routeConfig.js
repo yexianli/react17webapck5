@@ -1,28 +1,31 @@
-import App from '../components/app';
 import Test from '../components/test/test';
 import Header from '../components/header/header';
+import TimerView from '../components/mobxDemo/mobxDemo';
 
 const NoMatch = function () {
-    return <div>NoMatch</div>;
+  return <div>NoMatch</div>;
 };
 const Home = function () {
-    return <div>home 1</div>;
+  return <div>home 1</div>;
 };
 const routeConfig = [
-    {
-        path: '/',
-        element: <Home />,
-    },
+  {
+    path: '/',
+    element: <Home />,
+  },
 
-    {
-        path: '/test',
-        element: <Test />,
-    },
-    {
-        path: '/header',
-        element: <Header />,
-    },
-    { path: '*', element: <NoMatch /> },
+  {
+    path: '/test',
+    element: <Test />,
+  },
+  {
+    path: '/header',
+    element: <Header />,
+  }, {
+    path: 'mobxDemo',
+    element: <TimerView />,
+  },
+  { path: '*', element: <NoMatch /> },
 
 ];
 export default routeConfig;

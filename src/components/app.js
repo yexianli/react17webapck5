@@ -16,6 +16,7 @@ const App = function () {
         <Link to='/test'>test</Link>
       </div>
       <Link to='/header'>header</Link>
+      <div><Link to='/mobxDemo'>mobxDemo</Link></div>
       {element}
 
     </>
